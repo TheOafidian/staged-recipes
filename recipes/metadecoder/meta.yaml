@@ -1,0 +1,33 @@
+{% set version = "1.0.19" %}
+
+package:
+    name: metadecoder
+    version: {{ version }}
+
+source:
+    url: https://github.com/liu-congcong/MetaDecoder/releases/download/v{{ version}}/metadecoder-{{ version }}-py3-none-any.whl
+    sha256: c3289eadffa01b0bf52f531fda96778b6429068136a35b031451e54b21b24373
+
+build:
+    number: 0
+    script: pip3 install -U https://github.com/liu-congcong/MetaDecoder/releases/download/v{{ version }}/metadecoder-{{ version }}-py3-none-any.whl
+
+requirements:
+    host:
+      - python
+      - pip
+    run:
+      - python>=3.8
+      - numpy
+      - scipy
+      - scikit-learn
+      - threadpoolctl
+
+test:
+    imports:
+      - metadecoder
+
+about:
+    home: https://github.com/liu-congcong/MetaDecoder
+    license: GNU
+    summary: 'An algorithm for clustering metagenomic sequences.'
