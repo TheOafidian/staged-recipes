@@ -29,5 +29,7 @@ test:
 
 about:
     home: https://github.com/liu-congcong/MetaDecoder
-    license: GNU
+    license: GPL
+    license_family: GPL
+    license_file: LICENSE.txt
     summary: 'An algorithm for clustering metagenomic sequences.'
